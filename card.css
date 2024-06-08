@@ -1,0 +1,146 @@
+.card {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    width: 510px;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+    height: 300px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 300px;
+    transition: all  0.1s  ease-in-out;
+    transition: all 0.2s ease-in-out;
+    margin-left: 65px;
+  }
+  
+  .card img {
+    max-width: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .parent-container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+
+  @media screen and (max-width: 1000px) {
+    .card {
+      width: 60%;
+      height: auto;
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    button{
+      width: 50%;
+    }
+
+
+  }
+#audih2{
+  font-size: auto;
+}
+
+  
+  .card:hover img {
+    filter: blur(5px);
+    transition: all 0.1s ease-in-out;
+  }
+  
+  .card .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: all  0.1s  ease-in-out;
+    visibility: hidden; /* added */
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .card:hover .info {
+    visibility: visible; /* added */
+  }
+  
+  .card .info h2 {
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .card .info p {
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .card .info button {
+    background-color: #000;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.1s ease-in-out;
+  }
+  
+  .card .info button:hover {
+    background-color: #fff;
+  }
+  
+  #buttonNYC{
+  background-color: #EF978D;
+  }
+  
+  #buttonNYC:hover{
+  background-color: #884841;
+  }
+  
+  #buttonr8{
+    background-color: #3B3C40;
+  }
+  
+  #buttonr8:hover{
+    background-color: #B49080;
+  }
+
+  #buttonpython{
+    background-color:black;
+  }
+  #buttonpython:hover{
+    background-color:rgb(11, 95, 67);
+  }
+  #buttondarkside{
+    background-color: #d27731;
+  }
+  #buttondarkside:hover{
+    background-color: #b4542b;
+  }
+
+  #unitygame{
+    background-color: #bf410d;
+  }
+  #unitygame:hover{
+    background-color: #f79e10;
+  }
+
+  #github{
+    background-color: #000;
+  }
+
+  #github:hover{
+    background-color: #4d4b4b;
+  }
+

@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+@font-face {
+  font-family: AstroSpace;
+  src: url(/fonts/AstroSpace.ttf);
+}
+
+*{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(img/mountain.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    background-attachment: fixed;
+}
+
+@media only screen and (max-width: 767px){
+
+}
+
+header {
+    background-color: #141b25;
+  }
+
+  .main-nav {
+    height: 90px;
+  }
+
+  .logo {
+    color: white;
+    line-height: 90px;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 30px;
+    font-family: "AstroSpace", sans-serif;
+  }
+
+  .navlinks {
+    list-style: none;
+    float: right;
+    line-height: 90px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navlinks li {
+    display: inline-block;
+    margin: 0px 20px;
+  }
+
+  .navlinks li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s linear 0s;
+    text-transform: uppercase;
+  }
+
+  .navlinks li a:hover {
+    color: #884841;
+    padding-bottom: 7px;
+    border-bottom: 2px solid #884841;
+  }
+
+  li a.contact {
+    background-color: #EF978D;
+    padding: 9px 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+    border-bottom: none;
+  }
+
+  li a.contact:hover {
+    background-color: #884841;
+    color: white;
+    border-bottom: none;
+  }
+
+  #check {
+    display: none;
+  }
+
+  .menu-btn {
+    font-size: 25px;
+    color: white;
+    float: right;
+    line-height: 90px;
+    margin-right: 40px;
+    display: none;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  @media (max-width: 800px) {
+    .navlinks {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      text-align: center;
+      transition: all 0.5s;
+      right: -100%;
+      background: #222831;
+    }
+
+    .navlinks li {
+      display: block;
+    }
+
+    .navlinks li a {
+      font-size: 20px;
+    }
+
+    .navlinks li a:hover {
+      border-bottom: none;
+    }
+
+    .menu-btn {
+      display: block;
+      text-decoration: none;
+
+    }
+
+    #check:checked ~ .navlinks {
+      right: 0;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .logo {
+      margin-left: 10px;
+      font-size: 25px;
+    }
+
+    .menu-btn {
+      margin-right: 10px;
+      font-size: 25px;
+      text-decoration: none;
+
+      
+    }
+
+    .menu-btn:focus {
+      color: blue;
+      text-decoration: none;
+
+    }
+  }
+  a:link {
+    text-decoration: none;
+    color: white;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: white;
+
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: white;
+
+  }
+  
+  a:active {
+    text-decoration: none;
+    color: white;
+
+  }
+
+  #section2{
+    background-color: transparent;
+    padding: 15px;
+    margin-top: 860px;
+    padding-top: 200px;
+    backdrop-filter: blur(24px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

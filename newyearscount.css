@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    background: url(img/switzerland-7543063.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Poppins';
+    color:#fff;
+    font-size: 10px;
+    overflow: hidden;
+}
+
+.countdown {
+  text-align: center;
+  margin-top: 110px;
+  margin-bottom: 0px;
+  font-size: 65px;
+  color:black;
+  
+}
+.countdown2 {
+  text-align: center;
+  margin-top: 0%;
+  margin-bottom: 15px;
+  font-size: 35px;
+  color:black;
+  
+}
+
+.countdown-container span{
+    font-size: 30px;
+    color: white;
+}
+
+.timer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.time {
+  font-weight: bold;
+  padding: 10px 25px;
+  font-size: 55px;
+  border: 4px solid #000;
+  border-radius: 15px;
+  margin: 0 15px;
+  backdrop-filter: blur(10px);
+}
+
+.button {
+  border: none;
+  color:black;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: auto;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: transparent; 
+  color: black; 
+  border: 2px solid rgb(113, 113, 218);
+  border-radius: 25px;
+
+}
+
+.button:hover {
+  background-color: rgb(113, 113, 218);
+  color: white;
+}
+
+@media only screen and (max-width: 600px){
+  body {
+    background-size: cover;
+    font-size: 12px;
+  }
+  .time {
+    padding: 5px 15px;
+    font-size: 35px;
+  }
+  .countdown-container {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .countdown{
+    font-size: 30px;
+  }
+  .countdown2{
+    font-size: 0px;
+  }
+}

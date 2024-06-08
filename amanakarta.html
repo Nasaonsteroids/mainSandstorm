@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.0/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.0/dist/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="amanakarta.css" />
+</head>
+<body>
+    <div id="map"></div>
+
+    <div id="search-container">
+        <input type="text" id="searchInput" placeholder="Enter address or place">
+        <button id="searchBtn">Search</button>
+        <button id="toggleModeBtn">Toggle Mode</button>
+        <button id="addMarkerBtn"><a href="https://docs.google.com/document/d/18GGhH9_p_1NPuuZ14-CMzEBTphPXIqW5C6mrTAauDqY/edit?usp=sharing">Planeringen</a></button>
+        <button id="addMarkerBtn"><a href="https://docs.google.com/document/d/1-C0gxX6sAFr0aPt6WA6mTElM9wAWbA40V_h8oZammFc/edit?usp=sharing">Dokumentation</a></button>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.0/dist/leaflet.markercluster.js"></script>
+    <script src="amanakarta.js"></script>
+</body>
+</html>
