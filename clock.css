@@ -7,9 +7,9 @@
 }
 
 #clock {
-    font-size: 10em;
+    font-size: 9em;
     text-align: center;
-    color: #EF978D;
+    color: #93a267;
     transition: all 0.1s ease-in-out;
     cursor: default;
     background-color: transparent;
@@ -19,7 +19,7 @@
 
 }
 #clock:hover{
-    color: #884841;
+    color: black;
     transition: all 0.1s ease-in-out;
     background-color: transparent;
     backdrop-filter: blur(0px);
