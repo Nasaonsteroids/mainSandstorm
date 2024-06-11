@@ -3,25 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pulsing Flower</title>
+    <title>Complex Pulsing Flower</title>
     <link rel="stylesheet" href="flower.css">
 </head>
 <body>
-    <a href="flower.html" id="home-link">Sphere.</a>
+    <a href="index.html" id="home-button">Home</a>
     <div id="scene">
-        <div class="tree"></div>
         <div class="pulsing-flower flower">
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="center"></div>
+            <div class="layer layer1">
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+            </div>
+            <div class="layer layer2">
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+            </div>
+            <div class="layer layer3">
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+            </div>
+            <div class="center">
+                <div class="inner-center"></div>
+            </div>
         </div>
-        <div class="tree"></div>
     </div>
+    <div id="falling-petals"></div>
+    <script src="flower.js"></script>
 </body>
 </html>

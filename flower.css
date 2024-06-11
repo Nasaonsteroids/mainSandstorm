@@ -10,16 +10,6 @@ body {
     position: relative;
 }
 
-#home-link {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    font-size: 24px;
-    color: #333;
-    text-decoration: none;
-    z-index: 1000;
-}
-
 #scene {
     width: 100%;
     height: 100%;
@@ -28,35 +18,25 @@ body {
     justify-content: center;
     align-items: center;
 }
-
-.tree {
-    width: 80px;
-    height: 200px;
-    background: #8B4513;
-    position: relative;
-    border-radius: 10px;
-}
-
-.tree::before {
-    content: "";
+#home-button {
     position: absolute;
-    bottom: 100%;
-    left: 50%;
-    width: 150px;
-    height: 150px;
-    background: #228B22;
-    border-radius: 50%;
-    transform: translateX(-50%);
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 1000;
 }
 
-.tree:nth-child(1) {
-    margin-right: auto;
+#home-button:hover {
+    background-color: #f0f0f0;
+    color: #000;
 }
-
-.tree:nth-child(3) {
-    margin-left: auto;
-}
-
 .pulsing-flower {
     position: relative;
     width: 200px;
@@ -67,33 +47,113 @@ body {
     align-items: center;
 }
 
-.pulsing-flower .petal {
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layer1 .petal {
     position: absolute;
     width: 40px;
     height: 100px;
-    background: pink;
+    background: radial-gradient(circle, #ff69b4, #ff1493);
     border-radius: 20px 20px 0 0;
     transform-origin: bottom center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-.pulsing-flower .petal:nth-child(1) { transform: rotate(0deg) translateY(-50px); }
-.pulsing-flower .petal:nth-child(2) { transform: rotate(45deg) translateY(-50px); }
-.pulsing-flower .petal:nth-child(3) { transform: rotate(90deg) translateY(-50px); }
-.pulsing-flower .petal:nth-child(4) { transform: rotate(135deg) translateY(-50px); }
-.pulsing-flower .petal:nth-child(5) { transform: rotate(180deg) translateY(-50px); }
-.pulsing-flower .petal:nth-child(6) { transform: rotate(225deg) translateY(-50px); }
-.pulsing-flower .petal:nth-child(7) { transform: rotate(270deg) translateY(-50px); }
-.pulsing-flower .petal:nth-child(8) { transform: rotate(315deg) translateY(-50px); }
+.layer2 .petal {
+    position: absolute;
+    top: 35%;
+    width: 30px;
+    height: 80px;
+    background: radial-gradient(circle, #ff6347, #ff4500);
+    border-radius: 15px 15px 0 0;
+    transform-origin: bottom center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.layer3 .petal {
+    position: absolute;
+    top: 45%;
+    width: 20px;
+    height: 60px;
+    background: radial-gradient(circle, #ffff00, #ffd700);
+    border-radius: 10px 10px 0 0;
+    transform-origin: bottom center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.layer1 .petal:nth-child(1) { transform: rotate(0deg) translateY(-50px); }
+.layer1 .petal:nth-child(2) { transform: rotate(45deg) translateY(-50px); }
+.layer1 .petal:nth-child(3) { transform: rotate(90deg) translateY(-50px); }
+.layer1 .petal:nth-child(4) { transform: rotate(135deg) translateY(-50px); }
+.layer1 .petal:nth-child(5) { transform: rotate(180deg) translateY(-50px); }
+.layer1 .petal:nth-child(6) { transform: rotate(225deg) translateY(-50px); }
+.layer1 .petal:nth-child(7) { transform: rotate(270deg) translateY(-50px); }
+.layer1 .petal:nth-child(8) { transform: rotate(315deg) translateY(-50px); }
+
+.layer2 .petal:nth-child(1) { transform: rotate(0deg) translateY(-40px); }
+.layer2 .petal:nth-child(2) { transform: rotate(45deg) translateY(-40px); }
+.layer2 .petal:nth-child(3) { transform: rotate(90deg) translateY(-40px); }
+.layer2 .petal:nth-child(4) { transform: rotate(135deg) translateY(-40px); }
+.layer2 .petal:nth-child(5) { transform: rotate(180deg) translateY(-40px); }
+.layer2 .petal:nth-child(6) { transform: rotate(225deg) translateY(-40px); }
+.layer2 .petal:nth-child(7) { transform: rotate(270deg) translateY(-40px); }
+.layer2 .petal:nth-child(8) { transform: rotate(315deg) translateY(-40px); }
+
+.layer3 .petal:nth-child(1) { transform: rotate(0deg) translateY(-30px); }
+.layer3 .petal:nth-child(2) { transform: rotate(45deg) translateY(-30px); }
+.layer3 .petal:nth-child(3) { transform: rotate(90deg) translateY(-30px); }
+.layer3 .petal:nth-child(4) { transform: rotate(135deg) translateY(-30px); }
+.layer3 .petal:nth-child(5) { transform: rotate(180deg) translateY(-30px); }
+.layer3 .petal:nth-child(6) { transform: rotate(225deg) translateY(-30px); }
+.layer3 .petal:nth-child(7) { transform: rotate(270deg) translateY(-30px); }
+.layer3 .petal:nth-child(8) { transform: rotate(315deg) translateY(-30px); }
 
 .pulsing-flower .center {
     position: absolute;
-    top: 50%;
+    top: 75%;
     left: 50%;
-    width: 40px;
-    height: 40px;
-    background: green;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #fffacd, #f0e68c);
     border-radius: 50%;
     transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pulsing-flower .inner-center {
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, #ffdead, #daa520);
+    border-radius: 50%;
+}
+#falling-petals {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.petal-fall {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #ff69b4, #ff1493);
+    border-radius: 50%;
+    animation: fall linear infinite;
 }
 
 @keyframes pulse {
@@ -102,5 +162,15 @@ body {
     }
     50% {
         transform: scale(1.2);
+    }
+}
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
     }
 }
