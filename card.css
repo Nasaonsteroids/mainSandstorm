@@ -1,151 +1,154 @@
+/* Main card styles */
 .card {
-    position: relative;
-    margin-right: auto;
-    margin-left: auto;
-    width: 510px;
-    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
-    height: 300px;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 10px;
-    text-align: center;
-    margin: 20px;
-    margin-bottom: 300px;
-    transition: all  0.1s  ease-in-out;
-    transition: all 0.2s ease-in-out;
-    margin-left: 65px;
-  }
-  
-  .card img {
-    max-width: 100%;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .parent-container{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-
-  @media screen and (max-width: 1000px) {
-    .card {
-      width: 60%;
-      height: auto;
-      margin-bottom: 20px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    button{
-      width: 50%;
-    }
-
-
-  }
-#audih2{
-  font-size: auto;
+  position: relative;
+  width: 300px;
+  margin: 20px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #fff;
+  perspective: 1000px;
+  border: 2px solid transparent;
+  display: inline-block; /* Ensure cards are inline-block */
+  vertical-align: top; /* Align cards to the top */
 }
 
-  
-  .card:hover img {
-    filter: blur(5px);
-    transition: all 0.1s ease-in-out;
-  }
-  
-  .card .info {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    transition: all  0.1s  ease-in-out;
-    visibility: hidden; /* added */
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .card:hover .info {
-    visibility: visible; /* added */
-  }
-  
-  .card .info h2 {
-    color: white;
-    margin-bottom: 10px;
-  }
-  
-  .card .info p {
-    color: white;
-    margin-bottom: 10px;
-  }
-  
-  .card .info button {
-    background-color: #000;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    text-align: center;
-    transition: all 0.1s ease-in-out;
-  }
-  
-  .card .info button:hover {
-    background-color: #fff;
-  }
-  
-  #buttonNYC{
-  background-color: #93a267;
-  }
-  
-  #buttonNYC:hover{
-  background-color: #485935;
-  }
-  
-  #buttonr8{
-    background-color: #3B3C40;
-  }
-  
-  #buttonr8:hover{
-    background-color: #B49080;
-  }
+/* 3D tilt effect */
+.card:hover {
+  transform: scale(1.05) rotateY(10deg) rotateX(10deg);
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.3);
+  border: 2px solid #93a267;
+  border-image: linear-gradient(135deg, #93a267, #ffffff);
+  border-image-slice: 1;
+}
 
-  #buttonpython{
-    background-color:black;
-  }
-  #buttonpython:hover{
-    background-color:rgb(11, 95, 67);
-  }
-  #buttondarkside{
-    background-color: #d27731;
-  }
-  #buttondarkside:hover{
-    background-color: #b4542b;
-  }
+/* Image styles */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 
-  #unitygame{
-    background-color: #bf410d;
-  }
-  #unitygame:hover{
-    background-color: #f79e10;
-  }
+.card:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
-  #github{
-    background-color: #000;
-  }
+/* Info section styles */
+.info {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  transition: background 0.3s, transform 0.3s;
+  position: relative;
+}
 
-  #github:hover{
-    background-color: #4d4b4b;
+/* Slide-up animation for text */
+.info h2,
+.info p {
+  position: relative;
+  transition: color 0.3s, transform 0.3s;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.card:hover .info h2,
+.card:hover .info p {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.info h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .info h2 {
+  color: #93a267;
+}
+
+.info p {
+  margin: 10px 0;
+  color: #666;
+}
+
+.card:hover .info p {
+  color: #333;
+}
+
+/* Button styles */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 15px rgba(147, 162, 103, 0.5);
+}
+
+/* Glow effect on button */
+.button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(122, 133, 75, 0.8);
+}
+
+.button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Ripple effect on button click */
+.button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.6s, opacity 0.6s;
+}
+
+.button:active::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+
+/* Shadow pulse effect */
+@keyframes shadowPulse {
+  0% {
+    box-shadow: 0 0 10px rgba(147, 162, 103, 0.5);
   }
-  #flowerbutton{
-    background-color: #93a267;
+  50% {
+    box-shadow: 0 0 25px rgba(147, 162, 103, 0.8);
   }
-  #flowerbutton:hover{
-    background-color: #485935;
+  100% {
+    box-shadow: 0 0 10px rgba(147, 162, 103, 0.5);
   }
+}
+
+.card:hover {
+  animation: shadowPulse 1.5s infinite;
+}
+
+/* Container for cards */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+}

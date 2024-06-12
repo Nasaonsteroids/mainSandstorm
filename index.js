@@ -1,13 +1,21 @@
-function updateTime() {
-  var date = new Date();
-  var hours = date.getHours().toString().padStart(2, '0');
-  var minutes = date.getMinutes().toString().padStart(2, '0');
-  var seconds = date.getSeconds().toString().padStart(2, '0');
+// index.js
+document.addEventListener("DOMContentLoaded", function() {
+    function updateClock() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+        
+        // Pad with zeroes
+        if (hours < 10) hours = "0" + hours;
+        if (minutes < 10) minutes = "0" + minutes;
+        if (seconds < 10) seconds = "0" + seconds;
 
-  document.getElementById("hours").innerHTML = hours;
-  document.getElementById("minutes").innerHTML = minutes;
-  document.getElementById("seconds").innerHTML = seconds;
-}
+        document.getElementById('hours').textContent = hours;
+        document.getElementById('minutes').textContent = minutes;
+        document.getElementById('seconds').textContent = seconds;
+    }
 
-setInterval(updateTime, 1000);
-//Rizz
+    setInterval(updateClock, 1000);
+    updateClock();
+});
